@@ -17,4 +17,4 @@ class Test(unittest.TestCase):
         self.assertEqual(cal.multiplication(10, 10), 100)
         self.assertEqual(cal.multiplication(10, -1), -10)
         self.assertEqual(cal.multiplication(-10, -10), 100)
-        self.assertEqual(cal.multiplication(-100, 0), 0)
+        self.assertEqual(cal.multiplication(-10, 0), 0)
