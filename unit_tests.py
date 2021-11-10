@@ -1,7 +1,7 @@
 import unittest
 import simple_calculator as cal
 
-
+# changed one test case
 class Test(unittest.TestCase):
     def test_addition(self):
         self.assertEqual(cal.addition(10, 10), 20)
