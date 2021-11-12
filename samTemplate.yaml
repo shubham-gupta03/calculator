@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  DempLambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.6
+      CodeUri: './LambdaCode'
+      Description: 'Lambda function for CD Demo'
+      Role: 'arn:aws:iam::001082169132:role/service-role/myLambdaRole'
+      Events: 
+        getAZsAPI:
+          Type: Api
+          Properties: 
+            Path: /getazs
+            Method: get
+      Environment:
+        Variables:
+          REGION: us-east-1
